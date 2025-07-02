@@ -5,6 +5,8 @@ return {
       capabilities = require("blink.cmp").get_lsp_capabilities(),
     })
     vim.lsp.enable("lua_ls")
+    vim.lsp.enable("rust_analyzer")
+    vim.lsp.enable("hls")
   end,
   dependencies = {
     "saghen/blink.cmp",

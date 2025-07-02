@@ -12,7 +12,6 @@ return {
     -- build = 'nix run .#build-plugin',
 
     opts = {
-      signature = { enabled = true },
       -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
       -- 'super-tab' for mappings similar to vscode (tab to accept)
       -- 'enter' for enter to accept
