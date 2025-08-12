@@ -22,6 +22,3 @@ export MANWIDTH=999
 
 # Remove escape delay for vi mode
 export KEYTIMEOUT=1
-
-# VR
-export VK_DRIVER_FILES="/usr/share/vulkan/icd.d/nvidia_icd.json"
