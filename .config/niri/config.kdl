@@ -75,10 +75,11 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return repeat=false { spawn "foot"; }
-    Mod+D repeat=false { spawn "fuzzel"; }
     Mod+W repeat=false { spawn "zen-browser"; }
     Mod+S repeat=false { spawn "zen-browser" "-p" "School"; }
     Mod+E repeat=false { spawn "nautilus"; }
+    Mod+D repeat=false { spawn "wofi" "--show" "drun"; }
+    Mod+P repeat=false { spawn "wofi" "--show" "dmenu"; }
 
     XF86AudioRaiseVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "--limit" "1" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
     XF86AudioLowerVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
