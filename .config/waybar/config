@@ -1,0 +1,82 @@
+{
+    "height": 30,
+    "spacing": 4,
+
+    "modules-left": [
+        "niri/workspaces",
+    ],
+
+    "modules-center": [
+        "clock",
+    ],
+
+    "modules-right": [
+        "wireplumber",
+        "bluetooth",
+        "network",
+        "battery",
+    ],
+
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰲡",
+            "2": "󰲣",
+            "3": "󰲥",
+            "4": "󰲧",
+            "5": "󰲩",
+            "6": "󰲫",
+            "7": "󰲭",
+            "8": "󰲯",
+            "9": "󰲱",
+            "focused": "󰪥",
+        },
+    },
+
+    "clock": {
+        "format": "{:%A, %B %d - %I:%M %p}",
+        "tooltip": false,
+    },
+
+    "wireplumber": {
+        "format": "{icon}",
+        "format-icons": [
+            "",
+            "",
+        ],
+        "states": {
+            "zero": 0,
+            "icons": 1,
+        },
+        "format-muted": "",
+        "format-zero": "",
+    },
+
+    "network": {
+        "format": "{icon}",
+        "format-icons": [
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨",
+        ],
+        "format-disconnected": "󰤯",
+    },
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": [
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹",
+        ],
+        "format-charging": "{capacity}% 󰂄",
+    },
+}

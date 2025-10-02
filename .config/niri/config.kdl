@@ -16,6 +16,7 @@ input {
     touchpad {
         tap
         natural-scroll
+        click-method "clickfinger"
     }
 
     mouse {
@@ -28,7 +29,7 @@ input {
 layout {
     gaps 4
 
-    center-focused-column "on-overflow"
+    center-focused-column "never"
 
     default-column-width { proportion 0.5; }
 
@@ -51,6 +52,8 @@ layout {
 
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "swaybg" "--image" "/home/zack/Pictures/wallpaper.jpg"
+spawn-at-startup "thunderbird"
 
 environment {
     DISPLAY ":0"
@@ -72,13 +75,15 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return repeat=false { spawn "foot"; }
-    Mod+D repeat=false { spawn "tofi-drun" "--drun-launch=true"; }
+    Mod+D repeat=false { spawn "fuzzel"; }
     Mod+W repeat=false { spawn "zen-browser"; }
+    Mod+S repeat=false { spawn "zen-browser" "-p" "School"; }
+    Mod+E repeat=false { spawn "nautilus"; }
 
-    XF86AudioRaiseVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
+    XF86AudioRaiseVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "--limit" "1" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
     XF86AudioLowerVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
-    XF86AudioMute         allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-    XF86AudioMicMute      allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    XF86AudioMute         repeat=false allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute      repeat=false allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
     XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "set" "+5%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "set" "5%-"; }
 
@@ -101,10 +106,6 @@ binds {
     Mod+Ctrl+K     { focus-monitor-up; }
     Mod+Ctrl+L     { focus-monitor-right; }
 
-    Mod+Ctrl+Shift+Left  { move-column-to-monitor-left; }
-    Mod+Ctrl+Shift+Down  { move-column-to-monitor-down; }
-    Mod+Ctrl+Shift+Up    { move-column-to-monitor-up; }
-    Mod+Ctrl+Shift+Right { move-column-to-monitor-right; }
     Mod+Ctrl+Shift+H     { move-column-to-monitor-left; }
     Mod+Ctrl+Shift+J     { move-column-to-monitor-down; }
     Mod+Ctrl+Shift+K     { move-column-to-monitor-up; }

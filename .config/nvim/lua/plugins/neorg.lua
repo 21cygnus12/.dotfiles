@@ -20,6 +20,7 @@ return {
                         strategy = "by_path",
                     },
                 },
+                ["core.export"] = {},
             },
         },
         config = function(_, opts)
