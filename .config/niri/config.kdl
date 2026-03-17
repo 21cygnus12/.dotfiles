@@ -48,7 +48,7 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        width 2
+        width 1
 
         active-color "#7fc8ff"
 
@@ -67,12 +67,9 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Space { spawn "dms" "ipc" "spotlight" "toggle"; }
-
     Mod+Return repeat=false { spawn "foot"; }
-    Mod+E repeat=false { spawn "nautilus"; }
     Mod+W repeat=false { spawn "zen-browser"; }
-    Mod+S repeat=false { spawn "zen-browser" "-p" "school"; }
+    Mod+S repeat=false { spawn "zen-browser" "-p" "School"; }
 
     XF86AudioRaiseVolume { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
     XF86AudioLowerVolume { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
