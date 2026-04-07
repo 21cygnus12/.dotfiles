@@ -7,3 +7,5 @@
 [user]
 	email = zackgwaterman@gmail.com
 	name = 21cygnus12
+[init]
+	defaultBranch = main

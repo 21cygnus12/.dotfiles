@@ -8,15 +8,17 @@ gestures {
 }
 
 cursor {
-    hide-when-typing
-}
-
-output "eDP-1" {
-    position x=0 y=0
+    // hide-when-typing
+    // hide-after-inactive-ms 10000
 }
 
 output "DP-4" {
     position x=-208 y=-1080
+    focus-at-startup
+}
+
+output "eDP-1" {
+    position x=0 y=0
 }
 
 input {
@@ -28,10 +30,10 @@ input {
         tap
         natural-scroll
 	click-method "clickfinger"
+	scroll-factor 0.35
     }
 
     focus-follows-mouse max-scroll-amount="0%"
-    warp-mouse-to-focus
 }
 
 layout {
@@ -68,6 +70,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return repeat=false { spawn "foot"; }
+    Mod+Space repeat=false { spawn "wofi" "--show" "drun" "--matching=fuzzy"; }
+    Mod+E repeat=false { spawn "nautilus"; }
     Mod+W repeat=false { spawn "zen-browser"; }
     Mod+S repeat=false { spawn "zen-browser" "-p" "School"; }
 
