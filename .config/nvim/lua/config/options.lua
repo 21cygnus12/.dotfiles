@@ -9,6 +9,7 @@ vim.opt.cursorline = true
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.scrolloff = 999
+vim.opt.sidescrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.wrap = false
 vim.opt.ignorecase = true
